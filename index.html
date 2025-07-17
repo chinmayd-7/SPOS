@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Mood Mirror</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src='script.js'></script>
+</head>
+<body class="min-h-screen bg-gray-100 flex flex-col items-center justify-center transition-colors duration-500">
+
+    <!-- Header -->
+    <header class="mb-10">
+        <h1 class="text-4xl md:text-5xl font-bold text-center text-gray-800">Mood Mirror</h1>
+        <p class="text-lg text-center text-gray-600 mt-2">How are you feeling today?</p>
+    </header>
+
+    <!-- Mood Buttons Grid -->
+    <main class="w-full max-w-5xl px-4">
+        <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
+
+            <!-- Mood Buttons -->
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <button class="bg-yellow-400 hover:bg-yellow-300 transition shadow-lg text-white font-semibold py-4 rounded-lg text-xl" onclick="change(this.value)" value="0">Happy</button>
+                <button class="bg-blue-400 hover:bg-blue-300 transition shadow-lg text-white font-semibold py-4 rounded-lg text-xl" onclick="change(this.value)" value="1">Sad</button>
+                <button class="bg-red-400 hover:bg-red-300 transition shadow-lg text-white font-semibold py-4 rounded-lg text-xl" onclick="change(this.value)" value="2">Angry</button>
+                <button class="bg-gray-400 hover:bg-gray-300 transition shadow-lg text-white font-semibold py-4 rounded-lg text-xl col-span-1 md:col-span-1 " onclick="change(this.value)" value="3">Tired</button>
+                <button class="bg-purple-400 hover:bg-purple-300 transition shadow-lg text-white font-semibold py-4 rounded-lg text-xl col-span-2 md:col-span-1" onclick="change(this.value)" value="4">Excited</button>
+            </div>
+        </div>
+        <!-- Display Area -->
+        <div class="bg-white p-6 rounded-xl shadow-md flex flex-col justify-center items-center text-center my-8">
+            <h2 id="moodTexth2" class="text-2xl font-bold text-gray-800 mb-4">Your Mood:</h2>
+            <p id="moodText" class="text-xl text-gray-700 italic">Select a mood to see a motivational quote.</p>
+        </div>
+        
+    </main>
+
+</body>
+</html>
